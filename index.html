@@ -1,12 +1,373 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Zac Rowley</title>
-  </head>
-  <body>
-    <h1>Zac Rowley</h1>
-    <p>Site is deploying correctly.</p>
-  </body>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="author" content="Zac Rowley" />
+
+  <title>Zac Rowley | Commercial Operator</title>
+  <meta name="description" content="Zac Rowley is a commercial operator working across finance, operations, and product. He turns messy commercial problems into clear decisions and shipped outcomes." />
+
+  <link rel="canonical" href="https://YOURDOMAIN.COM/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zac Rowley | Commercial Operator" />
+  <meta property="og:description" content="Zac Rowley works across finance, operations, and product to turn messy commercial problems into clear decisions and shipped outcomes." />
+  <meta property="og:url" content="https://YOURDOMAIN.COM/" />
+  <meta property="og:site_name" content="Zac Rowley" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Zac Rowley | Commercial Operator" />
+  <meta name="twitter:description" content="Commercial operator across finance, operations, and product. Clear decisions and shipped outcomes." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0c0f;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --hair: rgba(255,255,255,0.14);
+      --accent: rgba(255,255,255,0.92);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1080px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #ffffff;
+        --card: rgba(10,12,15,0.04);
+        --text: rgba(10,12,15,0.92);
+        --muted: rgba(10,12,15,0.66);
+        --hair: rgba(10,12,15,0.12);
+        --accent: rgba(10,12,15,0.92);
+        --shadow: 0 16px 44px rgba(10,12,15,0.10);
+      }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a{color:inherit; text-decoration:none}
+    a:focus-visible{outline:2px solid var(--text); outline-offset:3px; border-radius:10px}
+    .container{max-width:var(--max); margin:0 auto; padding: 28px 20px 64px}
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding: 10px 0 22px; border-bottom:1px solid var(--hair);
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-0.02em}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); opacity:0.9}
+    .links{display:flex; gap:16px; flex-wrap:wrap}
+    .links a{color:var(--muted)}
+    .links a:hover{color:var(--text)}
+
+    .hero{
+      padding: 56px 0 18px;
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items:start;
+    }
+    @media (max-width: 880px){
+      .hero{grid-template-columns:1fr; padding-top:34px}
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size: clamp(30px, 4.3vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .subhead{
+      margin:0 0 20px;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin: 16px 0 18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border:1px solid var(--hair);
+      background: transparent;
+      box-shadow:none;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      background: var(--text);
+      color: var(--bg);
+      border-color: transparent;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .anchors h2{
+      margin: 0 0 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--muted);
+    }
+    .anchors ul{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+    .anchors li{display:flex; gap:10px; align-items:flex-start}
+    .pill{
+      font-size: 12px;
+      color: var(--muted);
+      border:1px solid var(--hair);
+      padding: 2px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .anchor-text{color: var(--text)}
+
+    .section{
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top:1px solid var(--hair);
+    }
+    .section h2{
+      margin: 0 0 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--muted);
+    }
+
+    .lead{
+      margin:0;
+      font-size: 16px;
+      color: var(--text);
+      max-width: 78ch;
+    }
+    .lead p{margin:0 0 10px}
+    .muted{color: var(--muted)}
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 880px){
+      .grid2{grid-template-columns:1fr}
+    }
+
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    .list li{margin: 8px 0}
+    .list li span{color: var(--muted)}
+
+    .path{
+      display:flex; flex-direction:column; gap:8px;
+      padding: 16px;
+      border-radius: 16px;
+      border:1px solid var(--hair);
+      background: rgba(255,255,255,0.02);
+    }
+    @media (prefers-color-scheme: light){
+      .path{background: rgba(10,12,15,0.02)}
+    }
+    .path h3{margin:0; font-size:16px; letter-spacing:-0.01em}
+    .path p{margin:0; color: var(--muted)}
+    .path a{margin-top:6px; display:inline-flex; width:max-content}
+    .quote{
+      margin-top: 14px;
+      padding: 16px;
+      border-left: 3px solid var(--hair);
+      color: var(--muted);
+    }
+
+    footer{
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top:1px solid var(--hair);
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a{color: var(--muted)}
+    footer a:hover{color: var(--text)}
+
+    /* Accessibility */
+    .skip{
+      position:absolute; left:-999px; top:10px;
+      background: var(--text); color: var(--bg);
+      padding:8px 10px; border-radius:10px;
+    }
+    .skip:focus{left:10px}
+  </style>
+
+  <!-- Structured data: Person + ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Zac Rowley",
+    "url":"https://YOURDOMAIN.COM/",
+    "jobTitle":"Commercial Operator",
+    "description":"Zac Rowley is a commercial operator working across finance, operations, and product. He turns messy commercial problems into clear decisions and shipped outcomes.",
+    "knowsAbout":[
+      "Finance","Operations","Product","Fundraising strategy","Fundraising readiness",
+      "Digital transformation","Workflow modernisation","Commercial strategy","Financial modelling"
+    ],
+    "alumniOf":[
+      {"@type":"Organization","name":"BCG Digital Ventures"}
+    ],
+    "affiliation":[
+      {"@type":"Organization","name":"Apple"}
+    ],
+    "sameAs":[
+      "https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Zac Rowley</span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="/consulting/">Consulting</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div>
+          <h1>I turn messy commercial problems into clear decisions and shipped outcomes.</h1>
+          <p class="subhead">
+            I work across finance, operations, and product to find the real constraints, quantify trade-offs, and execute.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="/consulting/">Work with me</a>
+            <a class="btn" href="/resume/">View resume</a>
+          </div>
+
+          <div class="section" style="border-top:none; padding-top:0; margin-top:6px;">
+            <h2>Positioning</h2>
+            <div class="lead">
+              <p>I’m a commercial operator who works best in ambiguity.</p>
+              <p class="muted">
+                I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny. My role is to break complex situations into solvable segments, surface what actually matters, and help teams move forward with clarity.
+              </p>
+              <p class="muted">I don’t optimise for optics. I optimise for outcomes.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card anchors" aria-label="Credibility anchors">
+          <h2>Credibility anchors</h2>
+          <ul>
+            <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+            <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+            <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
+            <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>What I’m known for</h2>
+        <ul class="list">
+          <li>Breaking down complex commercial and operational problems <span>(clarity first)</span></li>
+          <li>Translating strategy into executable plans <span>(shipping, not theatre)</span></li>
+          <li>Building decision confidence with imperfect information</li>
+          <li>Aligning financial reality with operational execution</li>
+          <li>Acting as a trusted thinking partner to founders and executives</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>How my work shows up</h2>
+        <p class="lead muted">
+          The work takes different forms depending on context, but the throughline stays the same.
+        </p>
+        <ul class="list">
+          <li>Advisory and retainer work with founders and executives</li>
+          <li>Short-term, high-impact problem-solving engagements</li>
+          <li>Fractional or interim roles during periods of transition</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Choose your path</h2>
+        <div class="grid2">
+          <div class="path">
+            <h3>Work with me</h3>
+            <p>Advisory, project, and fractional work focused on complex commercial, operational, and transformation problems.</p>
+            <a class="btn" href="/consulting/">Work with me →</a>
+          </div>
+
+          <div class="path">
+            <h3>View resume</h3>
+            <p>A detailed view of my experience, projects delivered, and results achieved across startups, scale-ups, and complex environments.</p>
+            <a class="btn" href="/resume/">View resume →</a>
+          </div>
+        </div>
+
+        <div class="quote" aria-label="Validation quote">
+          “Zac has a unique way of taking complex problems and breaking them into smaller segments, allowing us to find real actionable solutions. He doesn’t just find the right answer, he helps fix the problems.”
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> Zac Rowley</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="/about/">About</a>
+        <a href="/consulting/">Consulting</a>
+        <a href="/resume/">Resume</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
