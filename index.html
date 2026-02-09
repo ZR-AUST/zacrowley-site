@@ -82,11 +82,21 @@
     .hero{
       padding: 56px 0 18px;
       display:block;
-      gap: 26px;
-      align-items:start;
     }
     @media (max-width: 880px){
       .hero{grid-template-columns:1fr; padding-top:34px}
+    }
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    @media (max-width: 880px){
+      .hero-grid{
+       grid-template-columns: 1fr;
+     }
     }
 
     h1{
@@ -311,36 +321,38 @@
     </header>
 
     <main id="content">
-      <section class="hero">
-        <h1 class="hero-name">Zac Rowley</h1>
-        <h2 class="hero-role">Commercial Operator and Advisor</h2>
+      <section class="hero-grid">
+        <div class="hero">
+          <h1 class="hero-name">Zac Rowley</h1>
+          <h2 class="hero-role">Commercial Operator and Advisor</h2>
 
-        <p class="hero-lead">
-          I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance, operations, and product to find the real constraints, quantify trade-offs, and execute.
-        </p>
+          <p class="hero-lead">
+            I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance, operations, and product to find the real constraints, quantify trade-offs, and execute.
+          </p>
 
-        <div class="positioning">
-          <div class="section-label">POSITIONING</div>
-          <p>I’m a commercial operator who works best in ambiguity.</p>
-          <p>I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny. My role is to break complex situations into solvable segments, surface what actually matters, and help teams move forward with clarity.</p>
-          <p>I don’t optimise for optics. I optimise for outcomes.</p>
+          <div class="positioning">
+            <div class="section-label">POSITIONING</div>
+            <p>I’m a commercial operator who works best in ambiguity.</p>
+            <p>I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny. My role is to break complex situations into solvable segments, surface what actually matters, and help teams move forward with clarity.</p>
+            <p>I don’t optimise for optics. I optimise for outcomes.</p>
+          </div>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="/consulting">Work with me</a>
+            <a class="btn" href="/resume">View resume</a>
+          </div>
         </div>
 
-        <div class="hero-ctas">
-          <a class="btn primary" href="/consulting">Work with me</a>
-          <a class="btn" href="/resume">View resume</a>
-        </div>
+        <aside class="card anchors" aria-label="Credibility anchors">
+          <h2>Credibility anchors</h2>
+          <ul>
+            <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+            <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+            <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
+            <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
+          </ul>
+        </aside>
       </section>
-
-      <aside class="card anchors" aria-label="Credibility anchors">
-        <h2>Credibility anchors</h2>
-        <ul>
-          <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
-          <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
-          <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
-          <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
-        </ul>
-      </aside>
     </main>
 
 
