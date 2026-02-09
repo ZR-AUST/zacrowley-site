@@ -84,7 +84,7 @@
       display:block;
     }
     @media (max-width: 880px){
-      .hero{grid-template-columns:1fr; padding-top:34px}
+      .hero{ padding-top:34px}
     }
     .hero-grid{
       display: grid;
@@ -97,7 +97,15 @@
       .hero-grid{
        grid-template-columns: 1fr;
      }
-    }   
+    }  
+    .hero-portrait{
+      width: 96px;
+      height: 96px;
+     border-radius: 999px;
+     object-fit: cover;
+     margin-bottom: 14px;
+    } 
+    
     .anchors{
       margin-top: 32px;
     }
@@ -326,6 +334,11 @@
     <main id="content">
       <section class="hero-grid">
         <div class="hero">
+            <img
+              class="hero-portrait"
+              src="/images/zac-rowley.jpg"
+              alt="Zac Rowley, commercial operator and advisor"
+            />
           <h1 class="hero-name">Zac Rowley</h1>
           <h2 class="hero-role">Commercial Operator and Advisor</h2>
 
