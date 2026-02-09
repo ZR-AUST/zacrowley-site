@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="author" content="Zac Rowley" />
+
+  <title>Resume | Zac Rowley</title>
+  <meta name="description" content="Resume of Zac Rowley. Experience, projects delivered, and results achieved across startups, scale-ups, and complex environments." />
+
+  <link rel="canonical" href="https://ZacRowley.com/resume/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resume | Zac Rowley" />
+  <meta property="og:description" content="Experience, projects delivered, and results achieved." />
+  <meta property="og:url" content="https://ZacRowley.com/resume/" />
+  <meta property="og:site_name" content="Zac Rowley" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0c0f; --card:rgba(255,255,255,0.06);
+      --text:rgba(255,255,255,0.92); --muted:rgba(255,255,255,0.70);
+      --hair:rgba(255,255,255,0.14); --shadow:0 18px 50px rgba(0,0,0,0.35);
+      --radius:18px; --max:1080px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#fff; --card:rgba(10,12,15,0.04);
+        --text:rgba(10,12,15,0.92); --muted:rgba(10,12,15,0.66);
+        --hair:rgba(10,12,15,0.12); --shadow:0 16px 44px rgba(10,12,15,0.10);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
+    .nav{display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid var(--hair)}
+    .brand{display:flex; gap:10px; font-weight:700}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--text)}
+    .links{display:flex; gap:16px; flex-wrap:wrap}
+    .links a{color:var(--muted)}
+    .links a:hover{color:var(--text)}
+
+    h1{margin:28px 0 10px; font-size:clamp(28px,4vw,46px); letter-spacing:-0.03em}
+    .sub{color:var(--muted); max-width:85ch}
+
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:999px; border:1px solid var(--hair); font-weight:600}
+    .btn.primary{background:var(--text); color:var(--bg); border-color:transparent}
+
+    .section{margin-top:26px; padding-top:20px; border-top:1px solid var(--hair)}
+    .section h2{font-size:13px; letter-spacing:0.11em; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
+
+    .filters{display:flex; gap:8px; flex-wrap:wrap}
+    .chip{
+      border:1px solid var(--hair);
+      padding:6px 10px;
+      border-radius:999px;
+      background:transparent;
+      color:var(--muted);
+      font-weight:600;
+      cursor:pointer;
+    }
+    .chip.active{color:var(--text); background:rgba(255,255,255,0.06)}
+    @media (prefers-color-scheme: light){
+      .chip.active{background:rgba(10,12,15,0.06)}
+    }
+
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width:960px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--hair);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 6px; font-size:16px; letter-spacing:-0.01em}
+    .meta{color:var(--muted); font-size:14px}
+    ul{padding-left:18px; margin:10px 0 0}
+    li{margin:8px 0}
+
+    /* Filter behavior */
+    .dim{opacity:0.35}
+    .tagrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:12px; color:var(--muted); border:1px solid var(--hair); padding:2px 10px; border-radius:999px}
+
+    footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--hair); display:flex; justify-content:space-between; flex-wrap:wrap; color:var(--muted)}
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Zac Rowley",
+    "url":"https://ZacRowley.com/",
+    "jobTitle":"Commercial Operator",
+    "description":"Zac Rowley is a commercial operator working across finance, operations, and product.",
+    "knowsAbout":[
+      "Finance","Operations","Product","Fundraising strategy","Fundraising readiness",
+      "Digital transformation","Workflow modernisation","Commercial strategy","Financial modelling"
+    ],
+    "affiliation":[{"@type":"Organization","name":"Apple"},{"@type":"Organization","name":"BCG Digital Ventures"}],
+    "sameAs":["https://www.linkedin.com/in/zacrowley"]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/"><span class="dot"></span><span>Zac Rowley</span></a>
+      <nav class="links" aria-label="Primary">
+        <a href="/consulting/">Consulting</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Resume</h1>
+      <p class="sub">
+        Senior commercial operator across finance, operations, and product. Below is a detailed view of experience,
+        projects delivered, and results achieved. For an ATS-safe version, use the link below.
+      </p>
+
+      <div class="row">
+        <!-- Upload your PDF later at: /resume/Zac-Rowley-Resume.pdf -->
+        <a class="btn primary" href="/resume/Zac-Rowley-Resume.pdf">Download resume (PDF)</a>
+        <a class="btn" href="https://www.linkedin.com/in/zacrowley" target="_blank" rel="noreferrer">View LinkedIn</a>
+        <a class="btn" href="/resume/ats/">ATS-safe view</a>
+      </div>
+
+      <section class="section">
+        <h2>Filter by focus</h2>
+        <p class="sub">Filters highlight relevant items without changing chronology.</p>
+        <div class="filters" id="filters">
+          <button class="chip" data-filter="financial-modelling">Financial modelling</button>
+          <button class="chip" data-filter="fundraising">Fundraising readiness</button>
+          <button class="chip" data-filter="ops">Ops streamlining</button>
+          <button class="chip" data-filter="digital">Digital transformation</button>
+          <button class="chip" data-filter="strategy">Strategy & decisions</button>
+          <button class="chip" data-filter="leadership">Leadership</button>
+          <button class="chip" data-filter="sales">Sales process</button>
+          <button class="chip" data-filter="ai">AI enablement</button>
+          <button class="chip" data-filter="reset" aria-label="Reset filters">Reset</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience</h2>
+
+        <div class="grid">
+          <article class="card item" data-tags="strategy leadership ops" aria-label="Apple role">
+            <h3>Apple — Special Projects (APAC R&amp;D)</h3>
+            <div class="meta">Role: Special Projects (Confidential) · Location: APAC · Dates: replace with your dates</div>
+            <ul>
+              <li>Led high-trust workstreams in a constrained, confidential environment.</li>
+              <li>Coordinated across stakeholders to maintain execution quality under ambiguity.</li>
+              <li>Delivered outcomes where precision and decision discipline mattered more than speed.</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Strategy</span><span class="tag">Leadership</span><span class="tag">Ops</span>
+            </div>
+          </article>
+
+          <article class="card item" data-tags="strategy digital leadership" aria-label="BCG role">
+            <h3>BCG Digital Ventures — Consultant</h3>
+            <div class="meta">Role: Consultant · Dates: replace with your dates (6–7 months) · Notes: keep this subtle</div>
+            <ul>
+              <li>Worked in venture-building contexts where clarity and “speed to output” were required.</li>
+              <li>Helped translate ambiguous problems into executable plans and work products.</li>
+              <li>Supported cross-functional delivery where outcomes needed to survive real constraints.</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Strategy</span><span class="tag">Digital</span><span class="tag">Leadership</span>
+            </div>
+          </article>
+
+          <article class="card item" data-tags="fundraising financial-modelling strategy" aria-label="Venture fund role">
+            <h3>Venture Fund (San Francisco) — Investment / Venture</h3>
+            <div class="meta">Role: Venture / Investment · Dates: replace with your dates</div>
+            <ul>
+              <li>Applied investment-side thinking to founder decision-making and fundraising readiness.</li>
+              <li>Focused on aligning capital needs with milestones, hiring, and realistic allocation of funds.</li>
+              <li>Developed decision frameworks and models to stress-test assumptions.</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Fundraising</span><span class="tag">Financial modelling</span><span class="tag">Strategy</span>
+            </div>
+          </article>
+
+          <article class="card item" data-tags="ops leadership strategy" aria-label="Fractional roles">
+            <h3>Fractional / Advisory — Startups</h3>
+            <div class="meta">Role: Chief of Staff / Operator / Advisor · Dates: replace with your dates</div>
+            <ul>
+              <li>Supported founders and execs across ops streamlining, decision-making, and execution quality.</li>
+              <li>Built structures for prioritisation, accountability, and measurable delivery.</li>
+              <li>Worked across functions where ownership was unclear and outcomes mattered.</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Ops</span><span class="tag">Leadership</span><span class="tag">Strategy</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="sub" style="margin-top:12px;">
+          Note: Replace “Dates” placeholders with exact months and years. This improves recruiter trust and ATS parsing.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Projects delivered (selected)</h2>
+        <div class="grid">
+          <article class="card item" data-tags="sales ops strategy" aria-label="Sales process project">
+            <h3>Sales process rebuild (anonymised)</h3>
+            <div class="meta">Context: SMB / Startup · Engagement: short-term</div>
+            <ul>
+              <li>Diagnosed funnel and handoff bottlenecks.</li>
+              <li>Implemented a cleaner workflow and reporting visibility.</li>
+              <li>Outcome: replace with your measured result (conversion, cycle time, etc.).</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Sales</span><span class="tag">Ops</span><span class="tag">Strategy</span>
+            </div>
+          </article>
+
+          <article class="card item" data-tags="digital ai ops" aria-label="Workflow automation project">
+            <h3>Workflow modernisation (anonymised)</h3>
+            <div class="meta">Context: SMB · Engagement: short-term</div>
+            <ul>
+              <li>Mapped core workflows and identified leverage points.</li>
+              <li>Implemented practical automation and team adoption.</li>
+              <li>Outcome: replace with your measured result (time saved, error reduction, etc.).</li>
+            </ul>
+            <div class="tagrow">
+              <span class="tag">Digital</span><span class="tag">AI enablement</span><span class="tag">Ops</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Results achieved</h2>
+        <div class="card">
+          <ul>
+            <li>Enhanced sales process and delivery quality in constrained environments.</li>
+            <li>Improved fundraising readiness by aligning capital, milestones, and narrative discipline.</li>
+            <li>Delivered operational clarity and execution momentum across cross-functional teams.</li>
+            <li>Built complex financial models to quantify trade-offs and reduce decision risk.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <div class="card">
+          <ul>
+            <li>MBA — replace with institution and year</li>
+            <li>Master’s — replace with program, institution, year</li>
+            <li>Bachelor’s — replace with program, institution, year</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> Zac Rowley</div>
+      <div>
+        <a href="/about/">About</a> ·
+        <a href="/consulting/">Consulting</a> ·
+        <a href="/contact/">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const items = Array.from(document.querySelectorAll(".item"));
+
+    function setActive(filter) {
+      chips.forEach(c => c.classList.toggle("active", c.dataset.filter === filter));
+      if (filter === "reset") {
+        items.forEach(i => i.classList.remove("dim"));
+        chips.forEach(c => c.classList.remove("active"));
+        return;
+      }
+      items.forEach(i => {
+        const tags = (i.dataset.tags || "").split(" ");
+        i.classList.toggle("dim", !tags.includes(filter));
+      });
+    }
+
+    document.getElementById("filters").addEventListener("click", (e) => {
+      const btn = e.target.closest(".chip");
+      if (!btn) return;
+      setActive(btn.dataset.filter);
+    });
+  </script>
+</body>
+</html>
