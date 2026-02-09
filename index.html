@@ -9,13 +9,13 @@
   <title>Zac Rowley | Commercial Operator</title>
   <meta name="description" content="Zac Rowley is a commercial operator working across finance, operations, and product. He turns messy commercial problems into clear decisions and shipped outcomes." />
 
-  <link rel="canonical" href="https://ZacRowley.com/" />
+  <link rel="canonical" href="https://zacrowley.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Zac Rowley | Commercial Operator" />
   <meta property="og:description" content="Zac Rowley works across finance, operations, and product to turn messy commercial problems into clear decisions and shipped outcomes." />
-  <meta property="og:url" content="https://ZacRowley.com/" />
+  <meta property="og:url" content="https://zacrowley.com/" />
   <meta property="og:site_name" content="Zac Rowley" />
 
   <!-- Twitter -->
@@ -79,35 +79,44 @@
     .links a{color:var(--muted)}
     .links a:hover{color:var(--text)}
 
-    .hero{
-      padding: 56px 0 18px;
-      display:block;
-    }
-    @media (max-width: 880px){
-      .hero{ padding-top:34px}
-    }
+    /* HERO GRID */
     .hero-grid{
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 26px;
       align-items: start;
+      padding: 56px 0 18px;
     }
-
     @media (max-width: 880px){
       .hero-grid{
-       grid-template-columns: 1fr;
-     }
-    }  
+        grid-template-columns: 1fr;
+        padding-top: 34px;
+      }
+    }
+
+    .hero{display:block}
+
+    /* Right column wrapper: center + push portrait down */
+    .side{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:16px;
+    }
+
     .hero-portrait{
       width: 144px;
       height: 144px;
-     border-radius: 999px;
-     object-fit: cover;
-     margin-bottom: 16px;
-    } 
+      border-radius: 999px;
+      object-fit: cover;
+      margin-top: 36px;   /* adjust 24–60px to taste */
+      margin-bottom: 0;
+      display:block;
+    }
 
-    .anchors{
-      margin-top: 32px;
+    .side .card.anchors{
+      width: 100%;
+      max-width: 420px;
     }
 
     h1{
@@ -122,12 +131,13 @@
       color: var(--muted);
       max-width: 60ch;
     }
+
     /* Hero spacing overrides */
     .hero-name{ margin: 0; }
 
     .hero-role{
       margin: 0;
-      color: var(--text);   /* change to var(--muted) if you want it softer */
+      color: var(--text);
       font-weight: 600;
     }
 
@@ -137,7 +147,6 @@
 
     .hero-ctas{ margin-top: 16px; }
 
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin: 16px 0 18px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding: 10px 14px;
@@ -163,6 +172,7 @@
       padding: 18px;
     }
 
+    /* Credibility anchors: aligned text */
     .anchors h2{
       margin: 0 0 12px;
       font-size: 13px;
@@ -170,17 +180,32 @@
       letter-spacing: 0.11em;
       color: var(--muted);
     }
-    .anchors ul{list-style:none; padding:0; margin:0; display:grid; gap:10px}
-    .anchors li{display:flex; gap:10px; align-items:center}
-    .pill{
-      font-size: 12px;
-      color: var(--muted);
-      border:1px solid var(--hair);
-      padding: 2px 10px;
-      border-radius: 999px;
-      white-space: nowrap;
+    .anchors ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:12px;
     }
-    .anchor-text{color: var(--text)}
+    .anchors li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start; /* align pill with first text line */
+    }
+    .pill{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--hair);
+      padding:2px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+      margin-top:2px; /* optical align to first line */
+      flex:0 0 auto;
+    }
+    .anchor-text{
+      color:var(--text);
+      line-height:1.35;
+    }
 
     .section{
       margin-top: 28px;
@@ -265,52 +290,46 @@
     .skip:focus{left:10px}
   </style>
 
-  <!-- Structured data: Person + ProfessionalService -->
+  <!-- Structured data: single Person entity -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Zac Rowley",
-    "url":"https://ZacRowley.COM/",
-    "jobTitle":"Commercial Operator",
-    "description":"Zac Rowley is a commercial operator working across finance, operations, and product. He turns messy commercial problems into clear decisions and shipped outcomes.",
-    "knowsAbout":[
-      "Finance","Operations","Product","Fundraising strategy","Fundraising readiness",
-      "Digital transformation","Workflow modernisation","Commercial strategy","Financial modelling"
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://zacrowley.com/#zac-rowley",
+    "name": "Zac Rowley",
+    "url": "https://zacrowley.com/",
+    "image": "https://zacrowley.com/images/zac-rowley.jpg",
+    "jobTitle": "Commercial Operator and Advisor",
+    "description": "Zac Rowley is a commercial operator working across finance, operations, and product. He turns messy commercial problems into clear decisions and shipped outcomes.",
+    "knowsAbout": [
+      "Finance",
+      "Operations",
+      "Product",
+      "Fundraising strategy",
+      "Fundraising readiness",
+      "Digital transformation",
+      "Workflow modernisation",
+      "Commercial strategy",
+      "Financial modelling"
     ],
-    "alumniOf":[
-      {"@type":"Organization","name":"BCG Digital Ventures"}
+    "affiliation": [
+      { "@type": "Organization", "name": "Apple" }
     ],
-    "affiliation":[
-      {"@type":"Organization","name":"Apple"}
+    "alumniOf": [
+      { "@type": "Organization", "name": "BCG Digital Ventures" }
     ],
-    "sameAs":[
-      "https://www.linkedin.com/in/zacrowley"
+    "sameAs": [
+      "https://www.linkedin.com/in/zacrowley/"
+    ],
+    "email": [
+      "mailto:info@zacrowley.com",
+      "mailto:consulting@zacrowley.com",
+      "mailto:contact@zacrowley.com",
+      "mailto:investment@zacrowley.com",
+      "mailto:resume@zacrowley.com"
     ]
   }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://zacrowley.com/#zac-rowley",
-  "name": "Zac Rowley",
-  "url": "https://zacrowley.com/",
-  "image": "https://zacrowley.com/assets/images/zac-rowley.jpg",
-  "jobTitle": "Operator and Advisor",
-  "description": "Commercial operator and advisor focused on strategy, financial modelling, fundraising readiness, and operational execution across startups and SMBs.",
-  "sameAs": [
-    "https://www.linkedin.com/in/zacrowley/"
-  ],
-  "email": [
-    "mailto:info@zacrowley.com",
-    "mailto:consulting@zacrowley.com",
-    "mailto:contact@zacrowley.com",
-    "mailto:investment@zacrowley.com",
-    "mailto:resume@zacrowley.com"
-  ]
-}
-</script>
 
 </head>
 
@@ -331,50 +350,47 @@
       </nav>
     </header>
 
-<main id="content">
-  <section class="hero-grid">
+    <main id="content">
+      <section class="hero-grid">
+        <div class="hero">
+          <h1 class="hero-name">Zac Rowley</h1>
+          <h2 class="hero-role">Commercial Operator and Advisor</h2>
 
-    <div class="hero">
-      <h1 class="hero-name">Zac Rowley</h1>
-      <h2 class="hero-role">Commercial Operator and Advisor</h2>
+          <p class="hero-lead">
+            I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance, operations, and product to find the real constraints, quantify trade-offs, and execute.
+          </p>
 
-      <p class="hero-lead">
-        I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance, operations, and product to find the real constraints, quantify trade-offs, and execute.
-      </p>
+          <div class="positioning">
+            <div class="section-label">POSITIONING</div>
+            <p>I’m a commercial operator who works best in ambiguity.</p>
+            <p>I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny. My role is to break complex situations into solvable segments, surface what actually matters, and help teams move forward with clarity.</p>
+            <p>I don’t optimise for optics. I optimise for outcomes.</p>
+          </div>
 
-      <div class="positioning">
-        <div class="section-label">POSITIONING</div>
-        <p>I’m a commercial operator who works best in ambiguity.</p>
-        <p>I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny. My role is to break complex situations into solvable segments, surface what actually matters, and help teams move forward with clarity.</p>
-        <p>I don’t optimise for optics. I optimise for outcomes.</p>
-      </div>
+          <div class="hero-ctas">
+            <a class="btn primary" href="/consulting">Work with me</a>
+            <a class="btn" href="/resume">View resume</a>
+          </div>
+        </div>
 
-      <div class="hero-ctas">
-        <a class="btn primary" href="/consulting">Work with me</a>
-        <a class="btn" href="/resume">View resume</a>
-      </div>
-    </div>
+        <div class="side">
+          <img
+            class="hero-portrait"
+            src="/images/zac-rowley.jpg"
+            alt="Zac Rowley, commercial operator and advisor"
+          />
 
-    <div class="side">
-      <img
-        class="hero-portrait"
-        src="/images/zac-rowley.jpg"
-        alt="Zac Rowley, commercial operator and advisor"
-      />
-
-      <aside class="card anchors" aria-label="Credibility anchors">
-        <h2>Credibility anchors</h2>
-        <ul>
-          <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
-          <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
-          <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
-          <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
-        </ul>
-      </aside>
-    </div>
-
-  </section>
-</main>
+          <aside class="card anchors" aria-label="Credibility anchors">
+            <h2>Credibility anchors</h2>
+            <ul>
+              <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+              <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+              <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
+              <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
 
       <section class="section">
         <h2>What I’m known for</h2>
@@ -437,3 +453,4 @@
   </script>
 </body>
 </html>
+
