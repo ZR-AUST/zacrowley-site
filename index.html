@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-AU">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,7 +8,8 @@
   <meta name="author" content="Zac Rowley" />
 
   <title>Zac Rowley | Commercial Operator</title>
-  <meta name="description" content="Zac Rowley is a commercial operator working across finance, operations, and product." />
+  <meta name="description"
+    content="Zac Rowley is a commercial operator working across finance, operations, and product." />
 
   <link rel="canonical" href="https://zacrowley.com/" />
 
@@ -16,141 +18,185 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#fff;
-      --card:rgba(10,12,15,.04);
-      --text:rgba(10,12,15,.92);
-      --muted:rgba(10,12,15,.66);
-      --hair:rgba(10,12,15,.12);
-      --shadow:0 16px 44px rgba(10,12,15,.10);
-      --radius:18px;
-      --max:1080px;
+    :root {
+      --bg: #fff;
+      --card: rgba(10, 12, 15, .04);
+      --text: rgba(10, 12, 15, .92);
+      --muted: rgba(10, 12, 15, .66);
+      --hair: rgba(10, 12, 15, .12);
+      --shadow: 0 16px 44px rgba(10, 12, 15, .10);
+      --radius: 18px;
+      --max: 1080px;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
+    * {
+      box-sizing: border-box
     }
 
-    a{text-decoration:none;color:inherit}
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
 
-    .container{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:28px 20px 64px;
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 64px;
     }
 
     /* NAV */
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      padding-bottom:22px;
-      border-bottom:1px solid var(--hair);
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--hair);
     }
 
-    .links{display:flex;gap:16px}
-    .links a{color:var(--muted)}
+    .links {
+      display: flex;
+      gap: 16px
+    }
+
+    .links a {
+      color: var(--muted)
+    }
 
     /* HERO GRID */
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:40px;
-      margin-top:56px;
-      align-items:start;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 32px;
+      margin-top: 56px;
+      align-items: start;
     }
 
-    @media(max-width:880px){
-      .hero-grid{grid-template-columns:1fr}
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    h1{
-      margin:0;
-      font-size:clamp(32px,4vw,54px);
-      line-height:1.05;
-      letter-spacing:-.03em;
+    /* Left column basics */
+    .hero {
+      min-width: 0;
     }
 
-    .hero-role{
-      margin:6px 0 18px;
-      font-weight:600;
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -.03em;
     }
 
-    .hero-lead{
-      margin:0;
-      max-width:60ch;
+    .hero-role {
+      margin: 6px 0 18px;
+      font-weight: 600;
     }
 
-    .positioning{
-      margin-top:40px;
+    .hero-lead {
+      margin: 0;
+      max-width: 60ch;
     }
 
-    .section-label{
-      font-size:13px;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin-bottom:10px;
+    .positioning {
+      margin-top: 40px;
     }
 
-    .hero-ctas{
-      margin-top:24px;
-      display:flex;
-      gap:12px;
+    .section-label {
+      font-size: 13px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
 
-    .btn{
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--hair);
-      font-weight:600;
+    /* CTA row: centered */
+    .hero-ctas {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
 
-    .btn.primary{
-      background:var(--text);
-      color:#fff;
-      border:none;
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: #fff;
+      border: none;
     }
 
     /* RIGHT COLUMN */
-    .side{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      margin-top:72px;
+    .side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      margin-top: 56px;
     }
 
-    .hero-portrait{
-      width:244px;
-      height:244px;
-      border-radius:999px;
-      object-fit:cover;
-      margin-bottom:24px;
+    @media (max-width: 880px) {
+      .side {
+        margin-top: 24px;
+      }
     }
 
-    /* CREDIBILITY */
-    .card{
-      width:100%;
-      background:var(--card);
-      border:1px solid var(--hair);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
+    /* Portrait responsive sizing */
+    .hero-portrait {
+      width: clamp(160px, 18vw, 240px);
+      height: clamp(160px, 18vw, 240px);
+      border-radius: 999px;
+      object-fit: cover;
     }
 
-    .anchors h2{
-      margin:0 0 14px;
-      font-size:13px;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--muted);
+    /* CREDIBILITY CARD */
+    .card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
     }
 
-    .anchors ul{
+    /* Keep the box from going too wide on narrow screens */
+    .side .anchors {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 880px) {
+      .side .anchors {
+        max-width: 420px;
+      }
+    }
+
+    .anchors h2 {
+      margin: 0 0 14px;
+      font-size: 13px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Anchors: perfect label/text alignment */
+    .anchors ul {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -160,11 +206,11 @@
       row-gap: 14px;
     }
 
-    .anchors li{
+    .anchors li {
       display: contents;
     }
 
-    .pill{
+    .pill {
       justify-self: start;
       align-self: start;
       font-size: 12px;
@@ -174,71 +220,76 @@
       border-radius: 999px;
       white-space: nowrap;
       line-height: 1;
+      margin-top: 2px;
     }
 
-    .anchor-text{
+    .anchor-text {
       line-height: 1.45;
     }
   </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-<header class="nav">
-  <strong>Zac Rowley</strong>
-  <nav class="links">
-    <a href="/consulting/">Consulting</a>
-    <a href="/resume/">Resume</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-  </nav>
-</header>
+    <header class="nav">
+      <strong>Zac Rowley</strong>
+      <nav class="links">
+        <a href="/consulting/">Consulting</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
 
-<main>
-<section class="hero-grid">
+    <main>
+      <section class="hero-grid">
 
-  <div>
-    <h1>Zac Rowley</h1>
-    <div class="hero-role">Commercial Operator and Advisor</div>
+        <div>
+          <h1>Zac Rowley</h1>
+          <div class="hero-role">Commercial Operator and Advisor</div>
 
-    <p class="hero-lead">
-      I turn messy commercial problems into clear decisions and shipped outcomes.
-      I work across finance, operations, and product to find the real constraints,
-      quantify trade-offs, and execute.
-    </p>
+          <p class="hero-lead">
+            I turn messy commercial problems into clear decisions and shipped outcomes.
+            I work across finance, operations, and product to find the real constraints,
+            quantify trade-offs, and execute.
+          </p>
 
-    <div class="positioning">
-      <div class="section-label"> </div>
-      <p>I’m a commercial operator who works best in chaotic ambiguity.</p>
-      <p>I’m typically brought in when the problem isn’t clean, the constraints are real,
-         and decisions need to hold up under scrutiny.</p>
-      <p>I don’t optimise for optics. I optimise for outcomes.</p>
-    </div>
+          <div class="positioning">
+            <div class="section-label"> </div>
+            <p>I’m a commercial operator who works best in chaotic ambiguity. I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to hold up under scrutiny.</p>
+            <p>I don’t optimise for optics. I optimise for outcomes.</p>
+          </div>
 
-    <div class="hero-ctas">
-      <a class="btn primary" href="/consulting/">Work with me</a>
-      <a class="btn" href="/resume/">View resume</a>
-    </div>
+          <div class="hero-ctas">
+            <a class="btn primary" href="/consulting/">Work With Me</a>
+            <a class="btn" href="/resume/">View Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+          </div>
+
+        </div>
+
+        <div class="side">
+          <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
+
+          <aside class="card anchors">
+            <h2>Selected Experience</h2>
+            <ul>
+              <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+              <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+              <li><span class="pill">Startups</span><span class="anchor-text">Senior Operator Roles In Technology
+                  Startups</span></li>
+              <li><span class="pill">Results</span><span class="anchor-text">Cross Industry Advisory & Execution
+                  Experience</span></li>
+            </ul>
+          </aside>
+        </div>
+
+      </section>
+    </main>
+
   </div>
-
-  <div class="side">
-    <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
-
-    <aside class="card anchors">
-      <h2>Selected Experience</h2>
-      <ul>
-        <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
-        <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
-        <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology startups</span></li>
-        <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
-      </ul>
-    </aside>
-  </div>
-
-</section>
-</main>
-
-</div>
 </body>
+
 </html>
