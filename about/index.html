@@ -10,56 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #fff;
+    :root{
+      --bg:#fff;
+      --card: rgba(10,12,15,.04);
       --text: rgba(10,12,15,.92);
       --muted: rgba(10,12,15,.66);
       --hair: rgba(10,12,15,.12);
-      --card: rgba(10,12,15,.04);
       --shadow: 0 16px 44px rgba(10,12,15,.10);
       --radius: 18px;
       --max: 1080px;
     }
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
+    a{color:inherit; text-decoration:none}
 
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 20px 64px;
-    }
+    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
 
     /* NAV */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--hair);
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      padding-bottom:22px;
+      border-bottom:1px solid var(--hair);
     }
-    .links {
-      display: flex;
-      gap: 16px;
-      color: var(--muted);
-    }
+    .links{display:flex; gap:16px}
+    .links a{color:var(--muted)}
 
-    /* ABOUT LAYOUT */
+    /* LAYOUT */
     .about-grid{
       display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      margin-top: 56px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+      gap:40px;
+      margin-top:56px;
+      align-items:start;
     }
     @media (max-width: 880px){
-      .about-grid{ grid-template-columns: 1fr; gap: 22px; }
+      .about-grid{grid-template-columns:1fr; gap:22px}
     }
 
     h1{
@@ -68,54 +61,67 @@
       line-height:1.1;
       letter-spacing:-0.03em;
     }
-    .sub{
-      margin: 10px 0 0;
+    .subhead{
+      margin:10px 0 0;
       color: var(--muted);
       max-width: 70ch;
     }
 
-    .prose{
-      margin-top: 22px;
-      max-width: 75ch;
-    }
-    .prose p{ margin: 0 0 14px; }
-
+    /* CARDS */
     .card{
       width:100%;
-      background: var(--card);
+      background:var(--card);
       border:1px solid var(--hair);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
       padding:18px;
     }
+    .card + .card{margin-top:14px}
+
     .card h2{
       margin:0 0 12px;
       font-size:13px;
       letter-spacing:.11em;
       text-transform:uppercase;
-      color: var(--muted);
+      color:var(--muted);
     }
-    .list{
-      margin:0;
-      padding-left: 18px;
-    }
-    .list li{ margin: 8px 0; }
-    .muted{ color: var(--muted); }
 
-    .portrait{
-      width: 220px;
-      height: 220px;
-      border-radius: 999px;
-      object-fit: cover;
-      display:block;
-      margin: 0 auto 18px;
+    .prose p{margin:0 0 12px}
+    .prose p:last-child{margin-bottom:0}
+
+    .list{margin:0; padding-left:18px}
+    .list li{margin:8px 0}
+
+    /* RIGHT COLUMN */
+    .side{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      margin-top: 10px; /* same feel as homepage */
     }
+    .portrait{
+      width:220px;
+      height:220px;
+      border-radius:999px;
+      object-fit:cover;
+    }
+    @media (max-width: 880px){
+      .portrait{width:180px; height:180px}
+    }
+
+    .side .card{max-width:520px}
+    @media (max-width: 880px){
+      .side .card{max-width:420px; margin:0 auto}
+    }
+
+    /* Small label style used in your site */
+    .k{color:var(--muted)}
   </style>
 </head>
 
 <body>
   <div class="container">
-
     <header class="nav">
       <strong>Zac Rowley</strong>
       <nav class="links">
@@ -129,46 +135,83 @@
     <main>
       <section class="about-grid">
 
-        <!-- LEFT -->
+        <!-- LEFT COLUMN: BOXES -->
         <div>
           <h1>About</h1>
-          <p class="sub">A short, human explanation of how you work, what you value, and what you’re optimising for.</p>
+          <p class="subhead">How I work, what I value, and what I’m optimising for.</p>
 
-          <div class="prose">
-            <p><strong>Write this in first person.</strong> Keep it direct and specific.</p>
-            <p>Start with the throughline: what you do, why you do it, and the kinds of problems you’re drawn to.</p>
-            <p>Add a compact career arc. Then values. Then what you do outside work (minimal detail).</p>
+          <div class="card">
+            <h2>Throughline</h2>
+            <div class="prose">
+              <p>I’m a commercial operator and advisor. I’m at my best in ambiguity, when the problem isn’t clean and the decisions have to hold up under scrutiny.</p>
+              <p>I break messy situations into solvable segments, quantify trade-offs, and help teams ship outcomes.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Career arc</h2>
+            <div class="prose">
+              <p>I started working early (personal training, then security), studied while working, and built range across startups and complex environments.</p>
+              <p>I was headhunted into Apple Special Projects (APAC R&amp;D), later spent time in venture, completed an MBA, and worked at BCG Digital Ventures.</p>
+              <p>Since then I’ve worked with founders and operators across advisory, project work, and fractional roles.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>How I show up</h2>
+            <ul class="list">
+              <li>Clarity-first, outcomes-driven</li>
+              <li>Strong bias to execution and decision quality</li>
+              <li>Comfortable owning messy problems end-to-end</li>
+              <li>Direct communication, low ego, high standards</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Values</h2>
+            <ul class="list">
+              <li>Ownership and meritocracy</li>
+              <li>Kindness and empathy</li>
+              <li>Doing the work, not the theatre</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Outside work</h2>
+            <ul class="list">
+              <li>Learning and building</li>
+              <li>Weight training and breath work</li>
+              <li>Jiu jitsu, surfing, golf</li>
+            </ul>
           </div>
         </div>
 
-        <!-- RIGHT -->
-        <div>
+        <!-- RIGHT COLUMN: PHOTO + BOXES -->
+        <div class="side">
           <img class="portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
 
           <aside class="card">
             <h2>At a glance</h2>
             <ul class="list">
-              <li><span class="muted">Mode:</span> operator + advisor</li>
-              <li><span class="muted">Strength:</span> clarity in ambiguity</li>
-              <li><span class="muted">Style:</span> outcomes over optics</li>
+              <li><span class="k">Mode:</span> Operator + advisor</li>
+              <li><span class="k">Strength:</span> Clarity in ambiguity</li>
+              <li><span class="k">Focus:</span> Finance, operations, product</li>
+              <li><span class="k">Style:</span> Outcomes over optics</li>
             </ul>
           </aside>
 
-          <div style="height:14px"></div>
-
           <aside class="card">
-            <h2>Outside work</h2>
+            <h2>What I don’t do</h2>
             <ul class="list">
-              <li>Learning and building</li>
-              <li>Training (weights, breath work)</li>
-              <li>Jiu jitsu, surfing, golf</li>
+              <li>Fintech or insurance work (legal constraints)</li>
+              <li>Performative strategy without execution</li>
+              <li>Projects without clear decision ownership</li>
             </ul>
           </aside>
         </div>
 
       </section>
     </main>
-
   </div>
 </body>
 </html>
