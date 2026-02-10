@@ -69,10 +69,10 @@
       color: var(--muted)
     }
 
-    /* HERO GRID */
+    /* ===== HERO LAYOUT (two columns) ===== */
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
       gap: 32px;
       margin-top: 56px;
       align-items: start;
@@ -81,123 +81,69 @@
     @media (max-width: 880px) {
       .hero-grid {
         grid-template-columns: 1fr;
+        gap: 22px;
       }
     }
 
-    /* Left column basics */
     .hero {
       min-width: 0;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(32px, 4vw, 54px);
-      line-height: 1.05;
-      letter-spacing: -.03em;
-    }
-
-    .hero-role {
-      margin: 6px 0 18px;
-      font-weight: 600;
-    }
-
-    .hero-lead {
-      margin: 0;
-      max-width: 60ch;
-    }
-
-    .positioning {
-      margin-top: 40px;
-    }
-
-    .section-label {
-      font-size: 13px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    /* CTA row: centered */
+    /* Buttons: left column, evenly spaced */
     .hero-ctas {
-      margin-top: 24px;
-      display: flex;
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      /* THIS is the critical part */
-      max-width: 60ch;
+      max-width: 520px;
+      /* keeps them visually tied to left content */
     }
 
-    .btn {
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--hair);
-      font-weight: 600;
+    @media (max-width: 520px) {
+      .hero-ctas {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
     }
 
-    .btn.primary {
-      background: var(--text);
-      color: #fff;
-      border: none;
-    }
-
-    /* RIGHT COLUMN */
+    /* Right column: portrait then card */
     .side {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 18px;
-      margin-top: 56px;
+      margin-top: 10px;
+      /* aligns portrait closer to header line */
     }
 
-    @media (max-width: 880px) {
-      .side {
-        margin-top: 24px;
-      }
-    }
-
-    /* Portrait responsive sizing */
     .hero-portrait {
-      width: clamp(160px, 18vw, 240px);
-      height: clamp(160px, 18vw, 240px);
+      width: 220px;
+      height: 220px;
       border-radius: 999px;
       object-fit: cover;
     }
 
-    /* CREDIBILITY CARD */
-    .card {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--hair);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
+    @media (max-width: 880px) {
+      .hero-portrait {
+        width: 180px;
+        height: 180px;
+      }
     }
 
-    /* Keep the box from going too wide on narrow screens */
+    /* Card width control on mobile */
     .side .anchors {
       width: 100%;
       max-width: 520px;
-      margin: 0 auto;
     }
 
     @media (max-width: 880px) {
       .side .anchors {
         max-width: 420px;
+        margin: 0 auto;
       }
     }
 
-    .anchors h2 {
-      margin: 0 0 14px;
-      font-size: 13px;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* Anchors: perfect label/text alignment */
+    /* ===== ANCHORS (aligned label + text) ===== */
     .anchors ul {
       list-style: none;
       padding: 0;
@@ -246,27 +192,48 @@
 
     <main>
       <section class="hero-grid">
-
-        <div>
-          <h1>Zac Rowley</h1>
-          <div class="hero-role">Commercial Operator and Advisor</div>
+        <div class="hero">
+          <h1 class="hero-name">Zac Rowley</h1>
+          <h2 class="hero-role">Commercial Operator and Advisor</h2>
 
           <p class="hero-lead">
-            I turn messy commercial problems into clear decisions and shipped outcomes.
-            I work across finance, operations, and product to find the real constraints,
-            quantify trade-offs, and execute.
-          <p>
-          <p>I’m a commercial operator who works best in chaotic ambiguity. I’m typically brought in when the problem
-            isn’t clean, the constraints are real, and decisions need to hold up under scrutiny.</p>
-          <p>I don’t optimise for optics. I optimise for outcomes.</p>
+            I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance,
+            operations, and product to find the real constraints, quantify trade-offs, and execute.
+          </p>
+
+          <div class="positioning">
+            <div class="section-label">POSITIONING</div>
+            <p>I’m a commercial operator who works best in ambiguity.</p>
+            <p>I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to
+              hold up under scrutiny. My role is to break complex situations into solvable segments, surface what
+              actually matters, and help teams move forward with clarity.</p>
+            <p>I don’t optimise for optics. I optimise for outcomes.</p>
+          </div>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="/consulting/">Work with me</a>
+            <a class="btn" href="/resume/">View resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+          </div>
         </div>
 
-        <div class="hero-ctas">
-          <a class="btn primary" href="/consulting/">Work With Me</a>
-          <a class="btn" href="/resume/">View Resume</a>
-          <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
+        <div class="side">
+          <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley" />
+
+          <aside class="card anchors" aria-label="Selected experience">
+            <h2>Selected experience</h2>
+            <ul>
+              <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+              <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+              <li><span class="pill">Startups</span><span class="anchor-text">Senior operator roles in technology
+                  startups</span></li>
+              <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution
+                  experience</span></li>
+            </ul>
+          </aside>
         </div>
+      </section>
 
   </div>
 
