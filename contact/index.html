@@ -2,94 +2,141 @@
 <html lang="en-AU">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="author" content="Zac Rowley" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Zac Rowley</title>
-  <meta name="description" content="Contact Zac Rowley. Consulting enquiries, exploratory sessions, and general contact." />
 
-  <link rel="canonical" href="https://ZacRowley.com/contact/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact | Zac Rowley" />
-  <meta property="og:description" content="Contact Zac Rowley for consulting enquiries or general contact." />
-  <meta property="og:url" content="https://ZacRowley.com/contact/" />
-  <meta property="og:site_name" content="Zac Rowley" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b0c0f; --card:rgba(255,255,255,0.06);
-      --text:rgba(255,255,255,0.92); --muted:rgba(255,255,255,0.70);
-      --hair:rgba(255,255,255,0.14); --shadow:0 18px 50px rgba(0,0,0,0.35);
-      --radius:18px; --max:980px;
+      --bg:#fff;
+      --card: rgba(10,12,15,.04);
+      --text: rgba(10,12,15,.92);
+      --muted: rgba(10,12,15,.66);
+      --hair: rgba(10,12,15,.12);
+      --shadow: 0 16px 44px rgba(10,12,15,.10);
+      --radius: 18px;
+      --max: 1080px;
     }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#fff; --card:rgba(10,12,15,0.04);
-        --text:rgba(10,12,15,0.92); --muted:rgba(10,12,15,0.66);
-        --hair:rgba(10,12,15,0.12); --shadow:0 16px 44px rgba(10,12,15,0.10);
-      }
-    }
+
     *{box-sizing:border-box}
     body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:var(--bg); color:var(--text); line-height:1.65;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
-    .nav{display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid var(--hair)}
-    .brand{display:flex; gap:10px; font-weight:700}
-    .dot{width:10px; height:10px; border-radius:999px; background:var(--text)}
-    .links{display:flex; gap:16px; flex-wrap:wrap}
-    .links a{color:var(--muted)}
-    .links a:hover{color:var(--text)}
-    h1{margin:28px 0 10px; font-size:clamp(28px,4vw,46px); letter-spacing:-0.03em}
-    .sub{color:var(--muted); max-width:78ch}
-    .section{margin-top:26px; padding-top:20px; border-top:1px solid var(--hair)}
-    .section h2{font-size:13px; letter-spacing:0.11em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
-    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
-    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
-    .card{background:var(--card); border:1px solid var(--hair); border-radius:var(--radius); padding:16px}
-    .btn{display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:999px; border:1px solid var(--hair); font-weight:600}
-    .btn.primary{background:var(--text); color:var(--bg); border-color:transparent}
-    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:13px; color:var(--muted)}
-    ul{padding-left:18px}
-    li{margin:8px 0}
-    .note{color:var(--muted); font-size:14px}
-    footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--hair); display:flex; justify-content:space-between; flex-wrap:wrap; color:var(--muted)}
-    .toggle{
-      display:flex; align-items:center; gap:10px; margin-top:10px;
-      user-select:none;
-    }
-    input[type="checkbox"]{transform:scale(1.1)}
-    .hidden{display:none}
-  </style>
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ContactPage",
-    "name":"Contact Zac Rowley",
-    "url":"https://ZacRowley.com/contact/",
-    "about":{"@type":"Person","name":"Zac Rowley"}
-  }
-  </script>
+    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
+
+    /* NAV */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      padding-bottom:22px;
+      border-bottom:1px solid var(--hair);
+    }
+    .links{display:flex; gap:16px}
+    .links a{color:var(--muted)}
+
+    /* LAYOUT */
+    .grid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+      gap:40px;
+      margin-top:56px;
+      align-items:start;
+    }
+    @media (max-width: 880px){
+      .grid{grid-template-columns:1fr; gap:22px}
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+    .subhead{
+      margin:10px 0 0;
+      color:var(--muted);
+      max-width:75ch;
+    }
+
+    /* CARDS */
+    .card{
+      background:var(--card);
+      border:1px solid var(--hair);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .card + .card{margin-top:14px}
+
+    .card h2{
+      margin:0 0 12px;
+      font-size:13px;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .prose p{margin:0 0 12px}
+    .prose p:last-child{margin-bottom:0}
+
+    .list{margin:0; padding-left:18px}
+    .list li{margin:8px 0}
+
+    /* Buttons */
+    .ctas{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--hair);
+      background:transparent;
+      font-weight:600;
+      color:var(--text);
+    }
+    .btn.primary{
+      background:var(--text);
+      color:var(--bg);
+      border-color:transparent;
+    }
+
+    /* Right column */
+    .side{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top:10px;
+    }
+    .side .card{max-width:520px}
+    @media (max-width:880px){
+      .side .card{max-width:420px; margin:0 auto}
+    }
+
+    .k{color:var(--muted)}
+  </style>
 </head>
 
 <body>
   <div class="container">
+
     <header class="nav">
-      <a class="brand" href="/"><span class="dot"></span><span>Zac Rowley</span></a>
-      <nav class="links" aria-label="Primary">
+      <strong>Zac Rowley</strong>
+      <nav class="links">
         <a href="/consulting/">Consulting</a>
         <a href="/resume/">Resume</a>
         <a href="/about/">About</a>
@@ -98,112 +145,78 @@
     </header>
 
     <main>
-      <h1>Contact</h1>
-      <p class="sub">
-        Use the appropriate route below. This keeps communication clean and fast.
-      </p>
+      <section class="grid">
 
-      <div class="grid">
-        <section class="card" aria-label="Consulting contact">
-          <h2>Consulting enquiries</h2>
-          <p class="sub">
-            Advisory, project, or fractional work. If you have a real problem and want a focused first conversation, start here.
+        <!-- LEFT -->
+        <div>
+          <h1>Contact</h1>
+          <p class="subhead">
+            The fastest way to get a useful response is to be specific about the problem, constraints, and timing.
           </p>
 
-          <p class="note"><strong>Email:</strong> <code>Consulting@ZacRowley.com</code></p>
-
-          <div class="btnrow">
-            <a class="btn primary" id="emailConsulting" href="mailto:Consulting@YZacRowley.com?subject=Exploratory%20session%20request&body=Context%3A%0A%0AWhat%20you%27re%20trying%20to%20achieve%3A%0A%0AConstraints%20or%20deadlines%3A%0A%0ARelevant%20numbers%20(if%20any)%3A%0A%0A">Email consulting</a>
-            <a class="btn" href="#exploratory">Exploratory session</a>
-          </div>
-
-          <p class="note" style="margin-top:10px;">
-            Email-first by default. Scheduling is available when needed.
-          </p>
-        </section>
-
-        <section class="card" aria-label="General contact">
-          <h2>General contact</h2>
-          <p class="sub">
-            Media, introductions, or anything not directly related to consulting work.
-          </p>
-
-          <p class="note"><strong>Email:</strong> <code>Contact@ZacRowley.com</code></p>
-
-          <div class="btnrow">
-            <a class="btn primary" id="emailGeneral" href="mailto:Contact@ZacRowley.com?subject=Hello&body=Hi%20Zac%2C%0A%0A">Email general</a>
-          </div>
-
-          <p class="note" style="margin-top:10px;">
-            If you’re a recruiter, use this route unless the message is specifically consulting-related.
-          </p>
-        </section>
-      </div>
-
-      <section id="exploratory" class="section">
-        <h2>Exploratory session</h2>
-        <div class="card">
-          <p class="sub">
-            Exploratory sessions are reserved for people actively working through a real problem.
-            Instead of a fee, I ask for a <strong>$50–$100 donation</strong> to a selected charity.
-            This keeps the conversation intentional.
-          </p>
-
-          <h3 style="margin:16px 0 8px; font-size:16px; letter-spacing:-0.01em;">Suggested charities</h3>
-          <ul>
-            <li><strong>Breast Cancer Network Australia (BCNA)</strong> (personal importance)</li>
-            <li>Cancer Council Australia</li>
-            <li>Beyond Blue</li>
-            <li>Indigenous Literacy Foundation</li>
-            <li>A girls-in-STEM charity of your choice</li>
-          </ul>
-
-          <p class="note">
-            Donation is made directly to the charity. If you proceed, include the donation confirmation in your email (screenshot is fine).
-          </p>
-
-          <div class="toggle">
-            <input id="showCalendar" type="checkbox" />
-            <label for="showCalendar" class="note">Show scheduling option (optional)</label>
-          </div>
-
-          <div id="calendarBlock" class="hidden" style="margin-top:12px;">
-            <p class="note">
-              Scheduling is optional. If you prefer to book directly, use the link below.
-            </p>
-
-            <!-- Replace this with your actual scheduling link later -->
-            <div class="btnrow">
-              <a class="btn" href="https://CALENDAR-LINK-GOES-HERE" target="_blank" rel="noreferrer">Open scheduling</a>
-              <a class="btn" href="mailto:Consulting@ZacRowley.com?subject=Donation%20completed%20%E2%80%94%20scheduling%20request&body=Donation%20completed%20to%3A%20%0AAmount%3A%20%0AReceipt%3A%20%0APreferred%20times%3A%20%0A">Email with donation confirmation</a>
+          <div class="card" style="margin-top:18px">
+            <h2>General enquiries</h2>
+            <div class="prose">
+              <p>For general questions, introductions, or context-setting.</p>
             </div>
+            <div class="ctas">
+              <a class="btn primary" href="mailto:info@zacrowley.com?subject=General%20enquiry">Email info@</a>
+            </div>
+          </div>
 
-            <p class="note" style="margin-top:10px;">
-              The calendar will be tied to a separate inbox, as discussed. This page supports email-first.
-            </p>
+          <div class="card">
+            <h2>Consulting</h2>
+            <div class="prose">
+              <p>Include a short description of the problem, constraints, and desired outcome.</p>
+            </div>
+            <div class="ctas">
+              <a class="btn primary"
+                 href="mailto:consulting@zacrowley.com?subject=Consulting%20request&body=Problem%3A%0AConstraints%3A%0ATimeline%3A%0AOutcome%3A">
+                 Consulting request
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Resume access</h2>
+            <div class="prose">
+              <p>If you’re reviewing me for an operator or advisory role, please request access to latest CV here.</p>
+            </div>
+            <div class="ctas">
+              <a class="btn" href="mailto:resume@zacrowley.com?subject=Resume%20request">Request resume</a>
+            </div>
           </div>
         </div>
+
+        <!-- RIGHT -->
+        <div class="side">
+          <aside class="card">
+            <h2>What helps</h2>
+            <ul class="list">
+              <li><span class="k">Context:</span> company stage, industry, size</li>
+              <li><span class="k">Problem:</span> what’s not working</li>
+              <li><span class="k">Constraints:</span> time, budget, people</li>
+              <li><span class="k">Decision:</span> what you’re stuck on</li>
+            </ul>
+          </aside>
+
+          <aside class="card">
+            <h2>Response expectations</h2>
+            <div class="prose">
+              <p>If it’s a fit, I’ll reply with next steps or a short call suggestion. If it’s not, I’ll say so directly.</p>
+            </div>
+          </aside>
+
+          <aside class="card">
+            <h2>Elsewhere</h2>
+            <div class="ctas">
+              <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </aside>
+        </div>
+
       </section>
     </main>
-
-    <footer>
-      <div>© <span id="y"></span> Zac Rowley</div>
-      <div>
-        <a href="/about/">About</a> ·
-        <a href="/consulting/">Consulting</a> ·
-        <a href="/resume/">Resume</a>
-      </div>
-    </footer>
   </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    const show = document.getElementById("showCalendar");
-    const block = document.getElementById("calendarBlock");
-    show.addEventListener("change", () => {
-      block.classList.toggle("hidden", !show.checked);
-    });
-  </script>
 </body>
 </html>
