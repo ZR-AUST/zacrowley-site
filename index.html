@@ -1,39 +1,242 @@
-<section class="hero-grid">
-  <div class="hero">
-    <h1 class="hero-name">Zac Rowley</h1>
-    <h2 class="hero-role">Commercial Operator and Advisor</h2>
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zac Rowley | Commercial Operator</title>
 
-    <p class="hero-lead">
-      I turn messy commercial problems into clear decisions and shipped outcomes. I work across finance,
-      operations, and product to find the real constraints, quantify trade-offs, and execute.
-    </p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
 
-    <p>I’m a commercial operator who works best in ambiguity.</p>
-    <p>
-      I’m typically brought in when the problem isn’t clean, the constraints are real, and decisions need to
-      hold up under scrutiny. My role is to break complex situations into solvable segments, surface what
-      actually matters, and help teams move forward with clarity.
-    </p>
-    <p>I don’t optimise for optics. I optimise for outcomes.</p>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: rgba(10,12,15,.92);
+      --muted: rgba(10,12,15,.66);
+      --hair: rgba(10,12,15,.12);
+      --card: rgba(10,12,15,.04);
+      --shadow: 0 16px 44px rgba(10,12,15,.10);
+      --radius: 18px;
+      --max: 1080px;
+    }
 
-    <div class="hero-ctas">
-      <a class="btn primary" href="/consulting/">Work with me</a>
-      <a class="btn" href="/resume/">View resume</a>
-      <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--hair);
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      color: var(--muted);
+    }
+
+    /* HERO GRID */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      margin-top: 56px;
+      align-items: start;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-role {
+      margin: 8px 0 18px;
+      font-weight: 600;
+    }
+
+    .hero-lead {
+      max-width: 60ch;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      margin: 0 0 12px;
+    }
+
+    /* BUTTONS */
+    .hero-ctas {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      font-weight: 600;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: #fff;
+      border: none;
+    }
+
+    /* RIGHT COLUMN */
+    .side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin-top: 42px; /* aligns with role line */
+    }
+
+    .hero-portrait {
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      object-fit: cover;
+    }
+
+    /* CARD */
+    .card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .anchors h2 {
+      margin: 0 0 14px;
+      font-size: 13px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ALIGNED LIST */
+    .anchors ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 16px;
+      row-gap: 14px;
+    }
+
+    .anchors li {
+      display: contents;
+    }
+
+    .pill {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--hair);
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .anchor-text {
+      line-height: 1.45;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="nav">
+      <strong>Zac Rowley</strong>
+      <nav class="links">
+        <a href="/consulting/">Consulting</a>
+        <a href="/resume/">Resume</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-grid">
+
+        <!-- LEFT -->
+        <div class="hero">
+          <h1>Zac Rowley</h1>
+          <h2 class="hero-role">Commercial Operator and Advisor</h2>
+
+          <p class="hero-lead">
+            I turn messy commercial problems into clear decisions and shipped outcomes.
+            I work across finance, operations, and product to find the real constraints,
+            quantify trade-offs, and execute.
+          </p>
+
+          <p>I’m a commercial operator who works best in ambiguity.</p>
+          <p>
+            I’m typically brought in when the problem isn’t clean, the constraints are real,
+            and decisions need to hold up under scrutiny.
+          </p>
+          <p>I don’t optimise for optics. I optimise for outcomes.</p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="/consulting/">Work with me</a>
+            <a class="btn" href="/resume/">View resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="side">
+          <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
+
+          <aside class="card anchors">
+            <h2>Selected Experience</h2>
+            <ul>
+              <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
+              <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
+              <li><span class="pill">Startups</span><span class="anchor-text">Senior Operator Roles in Technology Startups</span></li>
+              <li><span class="pill">Results</span><span class="anchor-text">Cross-industry advisory and execution experience</span></li>
+            </ul>
+          </aside>
+        </div>
+
+      </section>
+    </main>
+
   </div>
-
-  <div class="side">
-    <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
-
-    <aside class="card anchors">
-      <h2>Selected Experience</h2>
-      <ul>
-        <li><span class="pill">Apple</span><span class="anchor-text">Special Projects (APAC R&amp;D)</span></li>
-        <li><span class="pill">BCG</span><span class="anchor-text">BCG Digital Ventures</span></li>
-        <li><span class="pill">Startups</span><span class="anchor-text">Senior Operator Roles In Technology Startups</span></li>
-        <li><span class="pill">Results</span><span class="anchor-text">Cross Industry Advisory &amp; Execution Experience</span></li>
-      </ul>
-    </aside>
-  </div>
-</section>
+</body>
+</html>
