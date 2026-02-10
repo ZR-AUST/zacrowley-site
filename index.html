@@ -89,29 +89,13 @@
       min-width: 0;
     }
 
-    /* Buttons: left column, evenly spaced */
     .hero-ctas {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 24px;
+      display: flex;
       gap: 12px;
-      max-width: 520px;
-      /* keeps them visually tied to left content */
-    }
-
-    .hero-ctas .btn {
-      width: 100%;
-      display: inline-flex;
-      justify-content: center;
       align-items: center;
     }
 
-    @media (max-width: 520px) {
-      .hero-ctas {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-      }
-    }
 
     /* Right column: portrait then card */
     .side {
@@ -237,7 +221,7 @@
       </ul>
     </aside>
   </div>
-  
+
   </section>
   </main>
 
