@@ -53,7 +53,7 @@
     .links{display:flex; gap:16px}
     .links a{color:var(--muted)}
 
-    /* LAYOUT */
+    /* GRID */
 
     .grid{
       display:grid;
@@ -82,38 +82,12 @@
     .lead{
       margin:0;
       max-width:65ch;
-      color:var(--text);
     }
 
-    /* Buttons */
-
-    .hero-ctas{
-      margin-top:28px;
-      display:flex;
-      gap:12px;
-      justify-content:center;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--hair);
-      font-weight:600;
-    }
-
-    .btn.primary{
-      background:var(--text);
-      color:#fff;
-      border:none;
-    }
-
-    /* Skills */
+    /* SKILLS */
 
     .filters{
-      margin-top:32px;
+      margin-top:28px;
       display:flex;
       gap:10px;
       flex-wrap:wrap;
@@ -127,9 +101,60 @@
       color:var(--muted);
     }
 
-    /* Cards */
+    /* BUTTONS */
+
+    .hero-ctas{
+      margin-top:30px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid var(--hair);
+      font-weight:600;
+    }
+
+    .btn.primary{
+      background:var(--text);
+      color:#fff;
+      border:none;
+    }
+
+    /* RIGHT COLUMN */
+
+    .side{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:22px;
+      margin-top:8px;
+    }
+
+    .hero-portrait{
+      width:220px;
+      height:220px;
+      border-radius:999px;
+      object-fit:cover;
+    }
+
+    @media(max-width:880px){
+      .hero-portrait{
+        width:180px;
+        height:180px;
+      }
+    }
+
+    /* CARDS */
 
     .card{
+      width:100%;
       background:var(--card);
       border:1px solid var(--hair);
       border-radius:var(--radius);
@@ -146,7 +171,37 @@
       color:var(--muted);
     }
 
-    /* Anchors */
+    /* EXPERIENCE */
+
+    .exp-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    @media(max-width:880px){
+      .exp-grid{grid-template-columns:1fr}
+    }
+
+    .exp-card{
+      background:#fff;
+      border:1px solid var(--hair);
+      border-radius:14px;
+      padding:14px;
+    }
+
+    .exp-org{font-weight:700}
+    .exp-meta{color:var(--muted); font-size:14px; margin-bottom:10px}
+
+    .exp-list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .exp-list li{margin:6px 0}
+
+    /* ANCHORS */
 
     .anchors ul{
       list-style:none;
@@ -169,7 +224,7 @@
       white-space:nowrap;
     }
 
-    /* Accordion */
+    /* ACCORDION */
 
     .accordion-item{
       border-top:1px solid var(--hair);
@@ -182,7 +237,7 @@
     }
 
     .accordion-content{
-      margin-top:8px;
+      margin-top:6px;
       color:var(--muted);
       display:none;
     }
@@ -223,9 +278,16 @@
         <div class="filters">
           <span class="chip">Strategy</span>
           <span class="chip">Leadership</span>
-          <span class="chip">Financial Modeling</span>
+          <span class="chip">Financial Modelling</span>
           <span class="chip">AI Enablement</span>
-          <span class="chip">Venture Building / Investing</span>
+          <span class="chip">Venture Building</span>
+          <span class="chip">Digital Transformation</span>
+          <span class="chip">Commercial Strategy</span>
+          <span class="chip">Decision Modeling</span>
+          <span class="chip">Financial Audit</span>
+          <span class="chip">Process Optimisation</span>
+          <span class="chip">Venture Investing</span>
+          <span class="chip">Operational Excellence</span>
         </div>
 
         <div class="hero-ctas">
@@ -236,11 +298,41 @@
         <div class="card">
           <h2>Featured Experience</h2>
 
-          <p><strong>Apple</strong><br>
-          Special Projects (APAC R&amp;D)</p>
+          <div class="exp-grid">
 
-          <p><strong>BCG Digital Ventures</strong><br>
-          Strategy &amp; Venture Execution</p>
+            <div class="exp-card">
+              <div class="exp-org">Apple</div>
+              <div class="exp-meta">Special Projects · APAC R&amp;D</div>
+              <ul class="exp-list">
+                <li>Headhunted into confidential R&amp;D work</li>
+                <li>Cross-functional execution under constraints</li>
+                <li>Stakeholder alignment and delivery discipline</li>
+              </ul>
+            </div>
+
+            <div class="exp-card">
+              <div class="exp-org">BCG Digital Ventures</div>
+              <div class="exp-meta">Strategy · Venture Execution</div>
+              <ul class="exp-list">
+                <li>Structured ambiguous problems into decisions</li>
+                <li>Commercial analysis and operating cadence</li>
+                <li>Outcome focus over presentation</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Consulting</h2>
+        </div>
+
+        <div class="card">
+          <h2>VC</h2>
+        </div>
+
+        <div class="card">
+          <h2>Start Ups</h2>
         </div>
 
         <div class="card">
@@ -287,18 +379,23 @@
 
       <!-- RIGHT COLUMN -->
 
-      <aside class="card anchors">
-        <h2>Credibility</h2>
-        <ul>
-          <li><span class="pill">Apple</span><span>Special Projects (APAC R&amp;D)</span></li>
-          <li><span class="pill">BCG</span><span>Digital Ventures</span></li>
-          <li><span class="pill">Startups</span><span>Senior Operator Roles</span></li>
-          <li><span class="pill">Results</span><span>Cross-Industry Execution</span></li>
-        </ul>
-      </aside>
+      <div class="side">
+
+        <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
+
+        <aside class="card anchors">
+          <h2>Credibility</h2>
+          <ul>
+            <li><span class="pill">Apple</span><span>Special Projects (APAC R&amp;D)</span></li>
+            <li><span class="pill">BCG</span><span>Digital Ventures</span></li>
+            <li><span class="pill">Startups</span><span>Senior Operator Roles</span></li>
+            <li><span class="pill">Results</span><span>Cross-Industry Execution</span></li>
+          </ul>
+        </aside>
+
+      </div>
 
     </main>
-
   </div>
 
   <script>
