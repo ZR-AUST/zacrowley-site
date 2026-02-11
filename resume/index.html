@@ -84,27 +84,10 @@
       max-width:65ch;
     }
 
-    /* SKILLS */
-
-    .filters{
-      margin-top:28px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .chip{
-      padding:6px 12px;
-      border-radius:999px;
-      border:1px solid var(--hair);
-      font-size:13px;
-      color:var(--muted);
-    }
-
     /* BUTTONS */
 
     .hero-ctas{
-      margin-top:30px;
+      margin-top:22px;
       display:flex;
       gap:12px;
       justify-content:center;
@@ -119,12 +102,31 @@
       border-radius:999px;
       border:1px solid var(--hair);
       font-weight:600;
+      background:transparent;
+      color:var(--text);
     }
 
     .btn.primary{
       background:var(--text);
       color:#fff;
       border:none;
+    }
+
+    /* SKILLS */
+
+    .filters{
+      margin-top:22px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .chip{
+      padding:6px 12px;
+      border-radius:999px;
+      border:1px solid var(--hair);
+      font-size:13px;
+      color:var(--muted);
     }
 
     /* RIGHT COLUMN */
@@ -169,6 +171,12 @@
       letter-spacing:.11em;
       text-transform:uppercase;
       color:var(--muted);
+    }
+
+    /* Constrain secondary experience cards */
+    .exp-narrow{
+      max-width: 620px;
+      opacity: .92;
     }
 
     /* EXPERIENCE */
@@ -265,7 +273,6 @@
     <main class="grid">
 
       <!-- LEFT COLUMN -->
-
       <div>
 
         <h1>Zac Rowley</h1>
@@ -274,6 +281,12 @@
         <p class="lead">
           I work across finance, operations, and product to turn complex commercial situations into clear decisions and executable outcomes.
         </p>
+
+        <!-- Buttons moved under summary -->
+        <div class="hero-ctas">
+          <a class="btn primary" href="mailto:resume@zacrowley.com?subject=CV%20Request&body=Hi%20Zac%2C%0A%0AContext%3A%20%5Brole%20%2F%20company%5D%0AWhat%20I%27m%20assessing%3A%20%5Boperator%20%2F%20advisory%20fit%5D%0ATimeline%3A%20%5Bwhen%5D%0A%0AThanks%2C">Request CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
 
         <div class="filters">
           <span class="chip">Strategy</span>
@@ -288,11 +301,7 @@
           <span class="chip">Process Optimisation</span>
           <span class="chip">Venture Investing</span>
           <span class="chip">Operational Excellence</span>
-        </div>
-
-        <div class="hero-ctas">
-          <a class="btn primary" href="mailto:resume@zacrowley.com?subject=CV%20Request">Request CV</a>
-          <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank">LinkedIn</a>
+          <span class="chip">Sales</span>
         </div>
 
         <div class="card">
@@ -323,15 +332,15 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card exp-narrow">
           <h2>Consulting</h2>
         </div>
 
-        <div class="card">
+        <div class="card exp-narrow">
           <h2>VC</h2>
         </div>
 
-        <div class="card">
+        <div class="card exp-narrow">
           <h2>Start Ups</h2>
         </div>
 
@@ -378,7 +387,6 @@
       </div>
 
       <!-- RIGHT COLUMN -->
-
       <div class="side">
 
         <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
