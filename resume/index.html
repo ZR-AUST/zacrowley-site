@@ -398,6 +398,13 @@
 .anchor-text{
   line-height:1.45;
 }
+/* Static skills block (no filtering) */
+.skills-card{ margin-top: 28px; }
+.skills-static{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
   </style>
 </head>
@@ -434,22 +441,6 @@
             CV</a>
           <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank"
             rel="noopener noreferrer">LinkedIn</a>
-        </div>
-
-        <div class="filters" aria-label="Skills">
-          <span class="chip">Strategy</span>
-          <span class="chip">Leadership</span>
-          <span class="chip">Financial Modelling</span>
-          <span class="chip">AI Enablement</span>
-          <span class="chip">Venture Building</span>
-          <span class="chip">Digital Transformation</span>
-          <span class="chip">Commercial Strategy</span>
-          <span class="chip">Decision Modeling</span>
-          <span class="chip">Financial Audit</span>
-          <span class="chip">Process Optimisation</span>
-          <span class="chip">Venture Investing</span>
-          <span class="chip">Operational Excellence</span>
-          <span class="chip">Sales</span>
         </div>
 
         <div class="card">
@@ -573,17 +564,28 @@
         </aside>
 
       </div>
+<section class="card skills-card" aria-label="Key skills">
+  <h2>Key Skills</h2>
+  <div class="skills-static">
+    <span class="chip">Strategy</span>
+    <span class="chip">Leadership</span>
+    <span class="chip">Financial Modelling</span>
+    <span class="chip">AI Enablement</span>
+    <span class="chip">Venture Building</span>
+    <span class="chip">Digital Transformation</span>
+    <span class="chip">Commercial Strategy</span>
+    <span class="chip">Decision Modeling</span>
+    <span class="chip">Financial Audit</span>
+    <span class="chip">Process Optimisation</span>
+    <span class="chip">Venture Investing</span>
+    <span class="chip">Operational Excellence</span>
+    <span class="chip">Sales</span>
+  </div>
+</section>
 
     </main>
   </div>
 
-  <script>
-    document.querySelectorAll(".accordion-header").forEach(header => {
-      header.addEventListener("click", () => {
-        header.parentElement.classList.toggle("active");
-      });
-    });
-  </script>
 </body>
 
 </html>
