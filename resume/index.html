@@ -143,37 +143,34 @@
     }
 
     /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-      gap: 40px;
-      margin-top: 56px;
-      align-items: center;
-    }
+.grid{
+  display:grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  grid-template-areas:
+    "hero portrait"
+    "featured credibility";
+  gap:40px;
+  margin-top:56px;
+  align-items:start;
+}
 
-    @media(max-width:880px) {
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 22px
-      }
-    }
+.hero{ grid-area: hero; min-width:0; }
+.portrait-wrap{ grid-area: portrait; display:flex; justify-content:center; }
+.featured{ grid-area: featured; }
+.credibility{ grid-area: credibility; }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.05;
-      letter-spacing: -.03em;
-    }
+@media(max-width:880px){
+  .grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "hero"
+      "portrait"
+      "featured"
+      "credibility";
+    gap:22px;
+  }
+}
 
-    .headline {
-      margin: 6px 0 18px;
-      font-weight: 600;
-    }
-
-    .lead {
-      margin: 0;
-      max-width: 65ch;
-    }
 
     /* BUTTONS */
     .hero-ctas {
@@ -422,165 +419,59 @@
       </nav>
     </header>
 
-    <main class="grid">
+    <main >
+<section class="grid">
+  <div class="hero">
+    <h1>Zac Rowley</h1>
+    <div class="headline">Commercial Operator and Advisor</div>
 
-      <!-- LEFT COLUMN -->
-      <div>
+    <p class="lead">
+      I work across finance, operations, and product to turn complex commercial situations into clear decisions and executable outcomes.
+    </p>
 
-        <h1>Zac Rowley</h1>
-        <div class="headline">Commercial Operator And Advisor</div>
-
-        <p class="lead">
-          I work across finance, operations, and product to turn complex commercial situations into clear decisions and
-          executable outcomes.
-        </p>
-
-        <div class="hero-ctas">
-          <a class="btn primary"
-            href="mailto:resume@zacrowley.com?subject=CV%20Request&body=Hi%20Zac%2C%0A%0AContext%3A%20%5Brole%20%2F%20company%5D%0AWhat%20I%27m%20assessing%3A%20%5Boperator%20%2F%20advisory%20fit%5D%0ATimeline%3A%20%5Bwhen%5D%0A%0AThanks%2C">Request
-            CV</a>
-          <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
-        </div>
-
-        <div class="card">
-          <h2>Featured Experience</h2>
-
-          <div class="exp-grid">
-
-            <div class="exp-card">
-              <div class="exp-org">Apple</div>
-              <div class="exp-meta">Special Projects · APAC R&amp;D</div>
-              <ul class="exp-list">
-                <li>Headhunted into confidential R&amp;D work</li>
-                <li>Cross-functional execution under constraints</li>
-                <li>Stakeholder alignment and delivery discipline</li>
-              </ul>
-            </div>
-
-            <div class="exp-card">
-              <div class="exp-org">BCG Digital Ventures</div>
-              <div class="exp-meta">Strategy · Venture Execution</div>
-              <ul class="exp-list">
-                <li>Structured ambiguous problems into decisions</li>
-                <li>Commercial analysis and operating cadence</li>
-                <li>Outcome focus over presentation</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="card exp-narrow">
-          <h2>Consulting</h2>
-          <p class="section-muted">Short-term engagements solving commercial, operational, and transformation problems.
-          </p>
-          <ul class="exp-list">
-            <li>Delivered AI enablement, workflow modernisation, and process redesign</li>
-            <li>Diagnosed financial structures, commercial risks, and decision constraints</li>
-            <li>Embedded as chief of staff and CEO advisor across strategic execution initiatives</li>
-            <li>Identified and resolved core constraints across finance, operations, and growth</li>
-          </ul>
-        </div>
-
-        <div class="card exp-narrow">
-          <h2>VC</h2>
-          <p class="section-muted">Operator &amp; investment-side exposure across venture and innovation ecosystems.</p>
-          <ul class="exp-list">
-            <li>Investment team involvement and opportunity evaluation</li>
-            <li>Venture partner &amp; founder advisory support</li>
-            <li>SXSW Innovation Awards Judge</li>
-            <li>Incubator / Accelerator advisory board roles</li>
-          </ul>
-        </div>
-
-        <div class="card exp-narrow">
-          <h2>Start Ups</h2>
-          <p class="section-muted">Commercial &amp; operational leadership across early-stage and growth-stage startups.
-          </p>
-          <ul class="exp-list">
-            <li>Designed go-to-market strategy and commercial models</li>
-            <li>Led fundraising strategy and capital readiness alignment</li>
-            <li>Structured commercial strategy, pricing, and growth frameworks</li>
-            <li>Drove operational execution, cadence, and constraint management</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>Projects Delivered</h2>
-
-          <div class="accordion-item">
-            <div class="accordion-header">Financial Audit</div>
-            <div class="accordion-content">
-              Commercial diagnostics, financial structure review, and decision modelling.
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">AI Enablement</div>
-            <div class="accordion-content">
-              Workflow modernisation, automation opportunities, and execution planning.
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">Digital Transformation</div>
-            <div class="accordion-content">
-              Operational redesign, systems alignment, and performance improvement.
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">Ops Streamline</div>
-            <div class="accordion-content">
-              Constraint identification, process redesign, and efficiency gains.
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">Investigation</div>
-            <div class="accordion-content">
-              Complex commercial analysis, financial tracing, and problem isolation.
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="side">
-
-        <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
-
-        <aside class="card anchors" aria-label="Credibility">
-          <h2>Credibility</h2>
-          <ul>
-            <li><span class="pill">Apple</span><span>Human Engineering (APAC R&amp;D Lead)</span></li>
-            <li><span class="pill">BCG-X</span><span>Senior Venture Architect</span></li>
-            <li><span class="pill">Startups</span><span>Senior Operator Roles</span></li>
-            <li><span class="pill">Results</span><span>Cross-Industry Execution</span></li>
-          </ul>
-        </aside>
-
-      </div>
-<section class="card skills-card" aria-label="Key skills">
-  <h2>Key Skills</h2>
-  <div class="skills-static">
-    <span class="chip">Strategy</span>
-    <span class="chip">Leadership</span>
-    <span class="chip">Financial Modelling</span>
-    <span class="chip">AI Enablement</span>
-    <span class="chip">Venture Building</span>
-    <span class="chip">Digital Transformation</span>
-    <span class="chip">Commercial Strategy</span>
-    <span class="chip">Decision Modeling</span>
-    <span class="chip">Financial Audit</span>
-    <span class="chip">Process Optimisation</span>
-    <span class="chip">Venture Investing</span>
-    <span class="chip">Operational Excellence</span>
-    <span class="chip">Sales</span>
+    <div class="hero-ctas">
+      <a class="btn primary" href="mailto:resume@zacrowley.com">Request CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/zacrowley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
   </div>
+
+  <div class="portrait-wrap">
+    <img class="hero-portrait" src="/images/zac-rowley.jpg" alt="Zac Rowley">
+  </div>
+
+  <aside class="card featured">
+    <h2>Featured Experience</h2>
+
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-org">Apple</div>
+        <div class="exp-meta">Special Projects · APAC R&amp;D</div>
+        <ul class="exp-list">
+          <li>Headhunted into confidential R&amp;D work</li>
+          <li>Commercial problem solving across ambiguity</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-org">BCG Digital Ventures</div>
+        <div class="exp-meta">Strategy · Venture Execution</div>
+        <ul class="exp-list">
+          <li>Structured ambiguous problems into decisions</li>
+          <li>Built execution plans that shipped</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="card anchors credibility">
+    <h2>Credibility</h2>
+    <ul>
+      <li><span class="pill">Apple</span><span class="anchor-text">Human Engineering (APAC R&amp;D Lead)</span></li>
+      <li><span class="pill">BCG-X</span><span class="anchor-text">Senior Venture Architect</span></li>
+      <li><span class="pill">Startups</span><span class="anchor-text">Senior Operator Roles</span></li>
+      <li><span class="pill">Results</span><span class="anchor-text">Cross Industry Execution</span></li>
+    </ul>
+  </aside>
 </section>
 
     </main>
