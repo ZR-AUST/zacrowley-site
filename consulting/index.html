@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-AU">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,128 +9,250 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://zacrowley.com/#zacrowley",
+      "name": "Zac Rowley",
+      "url": "https://zacrowley.com/",
+      "jobTitle": "Commercial Operator and Advisor",
+      "sameAs": [
+        "https://www.linkedin.com/in/zacrowley/"
+      ],
+      "knowsAbout": [
+        "Commercial Strategy",
+        "Financial Modelling",
+        "Operational Strategy",
+        "Decision Modelling",
+        "Digital Transformation",
+        "AI Enablement",
+        "Fundraising Strategy"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Role",
+          "roleName": "Special Projects",
+          "memberOf": {
+            "@type": "Organization",
+            "name": "Apple"
+          }
+        },
+        {
+          "@type": "Role",
+          "roleName": "Consultant",
+          "memberOf": {
+            "@type": "Organization",
+            "name": "BCG Digital Ventures"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zacrowley.com/#advisory",
+      "name": "Zac Rowley Advisory",
+      "url": "https://zacrowley.com/",
+      "founder": {
+        "@id": "https://zacrowley.com/#zacrowley"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "serviceOffered": [
+        { "@type": "Service", "name": "Commercial Strategy" },
+        { "@type": "Service", "name": "Financial Modelling" },
+        { "@type": "Service", "name": "Operational Advisory" },
+        { "@type": "Service", "name": "Digital Transformation" },
+        { "@type": "Service", "name": "AI Enablement" }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://zacrowley.com/#case-studies",
+      "name": "Selected Case Studies",
+      "creator": {
+        "@id": "https://zacrowley.com/#zacrowley"
+      }
+    }
+  ]
+}
+</script>
+
 
   <style>
-    :root{
-      --bg:#fff;
-      --card: rgba(10,12,15,.04);
-      --text: rgba(10,12,15,.92);
-      --muted: rgba(10,12,15,.66);
-      --hair: rgba(10,12,15,.12);
-      --shadow: 0 16px 44px rgba(10,12,15,.10);
+    :root {
+      --bg: #fff;
+      --card: rgba(10, 12, 15, .04);
+      --text: rgba(10, 12, 15, .92);
+      --muted: rgba(10, 12, 15, .66);
+      --hair: rgba(10, 12, 15, .12);
+      --shadow: 0 16px 44px rgba(10, 12, 15, .10);
       --radius: 18px;
       --max: 1080px;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    a{color:inherit; text-decoration:none}
 
-    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 64px
+    }
 
     /* NAV */
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      padding-bottom:22px;
-      border-bottom:1px solid var(--hair);
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--hair);
     }
-    .links{display:flex; gap:16px}
-    .links a{color:var(--muted)}
+
+    .links {
+      display: flex;
+      gap: 16px
+    }
+
+    .links a {
+      color: var(--muted)
+    }
 
     /* LAYOUT */
-    .grid{
-      display:grid;
+    .grid {
+      display: grid;
       grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
-      gap:40px;
-      margin-top:56px;
-      align-items:start;
-    }
-    @media (max-width: 880px){
-      .grid{grid-template-columns:1fr; gap:22px}
+      gap: 40px;
+      margin-top: 56px;
+      align-items: start;
     }
 
-    h1{
-      margin:0;
-      font-size: clamp(32px, 4vw, 48px);
-      line-height:1.1;
-      letter-spacing:-0.03em;
+    @media (max-width: 880px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 22px
+      }
     }
-    .subhead{
-      margin:10px 0 0;
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .subhead {
+      margin: 10px 0 0;
       color: var(--muted);
       max-width: 75ch;
     }
 
     /* CARDS */
-    .card{
-      width:100%;
-      background:var(--card);
-      border:1px solid var(--hair);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-    }
-    .card + .card{margin-top:14px}
-
-    .card h2{
-      margin:0 0 12px;
-      font-size:13px;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-      color:var(--muted);
+    .card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
     }
 
-    .prose p{margin:0 0 12px}
-    .prose p:last-child{margin-bottom:0}
+    .card+.card {
+      margin-top: 14px
+    }
 
-    .list{margin:0; padding-left:18px}
-    .list li{margin:8px 0}
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 13px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .prose p {
+      margin: 0 0 12px
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px
+    }
+
+    .list li {
+      margin: 8px 0
+    }
 
     /* Buttons */
-    .ctas{
-      margin-top:18px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
+    .ctas {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
     }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--hair);
-      background:transparent;
-      color:var(--text);
-      font-weight:600;
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
     }
-    .btn.primary{
-      background:var(--text);
-      color:var(--bg);
-      border-color:transparent;
+
+    .btn.primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: transparent;
     }
 
     /* Right column */
-    .side{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      margin-top:10px;
-    }
-    .side .card{max-width:520px}
-    @media (max-width: 880px){
-      .side .card{max-width:420px; margin:0 auto}
+    .side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
     }
 
-    .k{color:var(--muted)}
+    .side .card {
+      max-width: 520px
+    }
+
+    @media (max-width: 880px) {
+      .side .card {
+        max-width: 420px;
+        margin: 0 auto
+      }
+    }
+
+    .k {
+      color: var(--muted)
+    }
   </style>
 </head>
 
@@ -153,21 +276,26 @@
         <div>
           <h1>Consulting</h1>
           <p class="subhead">
-            I help founders, executives, and SMB owners move from messy problems to clear decisions and shipped outcomes.
+            I help founders, executives, and SMB owners move from messy problems to clear decisions and shipped
+            outcomes.
             Engagements are advisory, project-based, or fractional.
           </p>
 
           <div class="ctas">
-            <a class="btn primary" href="mailto:consulting@zacrowley.com?subject=Exploratory%20session%20request">Request Exploratory Session</a>
+            <a class="btn primary"
+              href="mailto:consulting@zacrowley.com?subject=Exploratory%20session%20request">Request Exploratory
+              Session</a>
             <a class="btn" href="mailto:info@zacrowley.com?subject=Consulting%20enquiry">Email</a>
           </div>
 
           <div class="card" style="margin-top:18px">
             <h2>Who I work with</h2>
             <ul class="list">
-              <li><span class="k">Founders:</span> Ops Streamlining, Venture Development, Fundraising Readiness, Pricing, Hiring</li>
+              <li><span class="k">Founders:</span> Ops Streamlining, Venture Development, Fundraising Readiness,
+                Pricing, Hiring</li>
               <li><span class="k">Executives:</span> Coaching, Strategy, Financial Audit</li>
-              <li><span class="k">SMB owners:</span> AI enablement, Workflow Streamlining, Digital Transformation, Short-term Fixes to Specific Problems</li>
+              <li><span class="k">SMB owners:</span> AI enablement, Workflow Streamlining, Digital Transformation,
+                Short-term Fixes to Specific Problems</li>
             </ul>
           </div>
 
@@ -203,7 +331,8 @@
           <div class="card">
             <h2>Validation</h2>
             <div class="prose">
-              <p>“Zac has a unique way of taking complex problems and breaking them into smaller segments allowing us to find real actionable solutions; he doesn’t just find the right answer, he helps fix the problems.”</p>
+              <p>“Zac has a unique way of taking complex problems and breaking them into smaller segments allowing us to
+                find real actionable solutions; he doesn’t just find the right answer, he helps fix the problems.”</p>
             </div>
           </div>
         </div>
@@ -224,17 +353,22 @@
             <h2>Fundraising note</h2>
             <div class="prose">
               <p>I’m not a broker.</p>
-              <p>I am able to support fundraising, although this needs to be in addition to other tasks. Otherwise, I help with strategy and readiness: how much to raise, who to speak to, how to present information, and aligning the ask to milestones and resourcing. And of course- introductions to decision makers</p>
+              <p>I am able to support fundraising, although this needs to be in addition to other tasks. Otherwise, I
+                help with strategy and readiness: how much to raise, who to speak to, how to present information, and
+                aligning the ask to milestones and resourcing. And of course- introductions to decision makers</p>
             </div>
           </aside>
 
           <aside class="card">
             <h2>Next step</h2>
             <div class="prose">
-              <p>Email a short description of the problem, constraints, and timeline. I’ll reply with the simplest path to clarity.</p>
+              <p>Email a short description of the problem, constraints, and timeline. I’ll reply with the simplest path
+                to clarity.</p>
             </div>
             <div class="ctas">
-              <a class="btn primary" href="mailto:consulting@zacrowley.com?subject=Consulting%20request&body=Problem%3A%0AConstraints%3A%0ATimeline%3A%0AOutcome%3A">Send details</a>
+              <a class="btn primary"
+                href="mailto:consulting@zacrowley.com?subject=Consulting%20request&body=Problem%3A%0AConstraints%3A%0ATimeline%3A%0AOutcome%3A">Send
+                details</a>
               <a class="btn" href="/contact/">Contact page</a>
             </div>
           </aside>
@@ -244,4 +378,5 @@
     </main>
   </div>
 </body>
+
 </html>
