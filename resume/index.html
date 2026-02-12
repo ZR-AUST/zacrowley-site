@@ -364,6 +364,41 @@
     .accordion-item.active .accordion-content {
       display: block;
     }
+
+    /* ===== FIX PILLS + ALIGNMENT (authoritative override) ===== */
+
+.anchors ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:18px;
+  row-gap:14px;
+}
+
+.anchors li{
+  display:contents;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:72px;
+  padding:5px 12px;
+  font-size:12px;
+  line-height:1;
+  border-radius:999px;
+  border:1px solid var(--hair);
+  color:var(--muted);
+  white-space:nowrap;
+}
+
+.anchor-text{
+  line-height:1.45;
+}
+
   </style>
 </head>
 
